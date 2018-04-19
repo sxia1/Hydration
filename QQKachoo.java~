@@ -1,9 +1,0 @@
-public class QQKachoo<D> implements Deque<D>{
-    public boolean add(D d){
-	addLast(d);
-	return true;
-    }
-    public void addLast(D d){
-	
-    }
-}
