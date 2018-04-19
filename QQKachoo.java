@@ -6,7 +6,7 @@
 public class QQKachoo<D> implements Deque<D>{
 
     //Instance Variables
-    private DLLNode<D> _front, _end;
+    private DLLNode<D> _head, _tail;
     private int _size;
 
     //Methods--------------------
@@ -21,10 +21,10 @@ public class QQKachoo<D> implements Deque<D>{
 	
     }
     public D getFirst(){
-	return _front.getValue();
+	return _head.getValue();
     }
     public D getLast(){
-	return _end.getValue();
+	return _tail.getValue();
     }
 
     //Add Methods
