@@ -6,19 +6,19 @@
 We decided on doubly linked nodes, as it allows for easy access to the elements before and after it *and* for the easy addition and removal of objects through nodes. Unlike array/ArrayList based implementations, one does not need to shift all the values when removing or adding something to the queue- instead, we can simply unlink two nodes, insert a node in between them, and link the previous and next pointers to the new node. Like the API specifies, using a DLLNode implementation does not have a fixed capacity, and does not provide support for indexed access to elements. 
 
 ### The methods that we plan to implement, from most to least important/implementable... 
-- [] public int size();
+- [x] public int size();
 
-- [] Methods to view the ends of the deque
+- [x] Methods to view the ends of the deque
     - public E element();  // public E peek(); 
     - public E getFirst(); // public E peekFirst();
     - public E getLast();  // public E peekLast(); 
     
-- [] Methods to add
+- [x] Methods to add
     - public boolean add(E e);
     - public void addFirst(E e); // public boolean offerFirst();
     - public void addLast(E e);  // public boolean offerLast();
     
-- [] Methods to remove
+- [x] Methods to remove
     - public E remove();
     - public E removeFirst();
     - public E removeLast();
