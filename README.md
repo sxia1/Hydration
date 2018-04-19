@@ -42,5 +42,5 @@ These two types of methods, at first glance, seem to be more complicated to impl
     - public E pollLast();
     - public void push(E e); 
  
- Simply repititons of what we have so far, except in stack form. 
+ Simply repetitions of what we have so far, except in stack form. 
     
