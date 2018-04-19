@@ -1,0 +1,11 @@
+public interface Deque<Card>{
+    public boolean add(Card c);
+    public void addLast(Card c);
+    /*
+      offerLast(e);
+      removeFirst();
+      pollFirst();
+      getFirst();
+      peekFirst();
+    */
+}
