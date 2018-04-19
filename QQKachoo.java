@@ -1,3 +1,8 @@
+//Team Hydration
+//Roster: Zane Wang, Sophia Xia, Maggie Zhao
+//APCS2 pd1
+//
+
 public class QQKachoo<D> implements Deque<D>{
 
     //Instance Variables
@@ -5,36 +10,43 @@ public class QQKachoo<D> implements Deque<D>{
     private int _size;
 
     //Methods--------------------
-    
+
+    //Size
     public int size(){
 	return _size;
     }
     
     //Accessor Methods
-    public Card element(){
+    public D element(){	
+	
     }
-    public Card getFirst(){
+    public D getFirst(){
+	return _front.getValue();
     }
-    public Card getLast(){
+    public D getLast(){
+	return _end.getValue();
     }
 
     //Add Methods
-    public boolean add(Card c){
+    public boolean add(D d){
+	
     }
-    public void addFirst(Card c){
+    public void addFirst(D d){
+	
     }
-    public void addLast(Card c){
+    public void addLast(D d){
+	
     }
 
     //Remove Methods
-    public Card remove(){
+    public D remove(){
+	
     }
-    public Card removeFirst(){
+    public D removeFirst(){
+	
     }
-    public Card removeLast(){
+    public D removeLast(){
+	
     }
 
-    
-    
-    public boolean contains(Object o){}
 }
