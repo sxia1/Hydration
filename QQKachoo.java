@@ -33,12 +33,12 @@ public class QQKachoo<D> implements Deque<D>{
 	
     }
     public void addFirst(D d){
-	LLNode<T> newNode(d, null, _head);
+	DLLNode<D> newNode= new DLLNode<D>(d, null, _head);
 	_head.setPrev(newNode);
 	_head = newNode;
     }
     public void addLast(D d){
-	LLNode<T> newNode(d, _tail, null);
+	DLLNode<D> newNode = new DLLNode<D>(d, _tail, null);
 	_tail.setNext(newNode);
 	_tail = newNode;
     }
@@ -48,12 +48,20 @@ public class QQKachoo<D> implements Deque<D>{
 	
     }
     public D removeFirst(){
+	D temp = _head.getCargo();
 	_head = _head.getNext();
 	_head.setPrev(null);
+	return temp;
     }
     public D removeLast(){
+	D temp = _tail.getCargo();
 	_tail = _tail.getPrev();
 	_tail.setNext(null);
+	return temp;
     }
 
+    public static void main(String[] args){
+	
+    }
+    
 }
