@@ -19,13 +19,13 @@ public class QQKachoo<D> implements Deque<D>{
     
     //Accessor Methods
     public D element(){	
-	
+	return _head.getCargo();
     }
     public D getFirst(){
-	return _head.getValue();
+	return _head.getCargo();
     }
     public D getLast(){
-	return _tail.getValue();
+	return _tail.getCargo();
     }
 
     //Add Methods
@@ -33,10 +33,14 @@ public class QQKachoo<D> implements Deque<D>{
 	
     }
     public void addFirst(D d){
-	
+	LLNode<T> newNode(d, null, _head);
+	_head.setPrev(newNode);
+	_head = newNode;
     }
     public void addLast(D d){
-	
+	LLNode<T> newNode(d, _tail, null);
+	_tail.setNext(newNode);
+	_tail = newNode;
     }
 
     //Remove Methods
@@ -44,10 +48,12 @@ public class QQKachoo<D> implements Deque<D>{
 	
     }
     public D removeFirst(){
-	
+	_head = _head.getNext();
+	_head.setPrev(null);
     }
     public D removeLast(){
-	
+	_tail = _tail.getPrev();
+	_tail.setNext(null);
     }
 
 }
