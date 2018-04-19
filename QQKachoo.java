@@ -1,7 +1,8 @@
 //Team Hydration
 //Roster: Zane Wang, Sophia Xia, Maggie Zhao
 //APCS2 pd1
-//
+//L02 -- All Hands on Deque! (Not Schenectady; rather, synecdoche.)
+//2018-04-18
 
 public class QQKachoo<D> implements Deque<D>{
 
