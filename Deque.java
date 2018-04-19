@@ -32,10 +32,11 @@ public interface Deque<Card>{
 
     //Remove Methods
     public Card remove();
-    public boolean remove(Object o);
     public Card removeFirst();
-    public boolean removeFirstOccurence(Object o);
     public Card removeLast();
+    //-----removeObjects: seems complicated
+    public boolean remove(Object o);
+    public boolean removeFirstOccurence(Object o);
     public boolean removeLastOccurence(Object o);
     //-----poll: seems redundant since it just removes and returns elements
     public Card poll();
