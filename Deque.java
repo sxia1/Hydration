@@ -5,7 +5,7 @@
 //2018-04-18
 
 public interface Deque<Card>{
-    
+
     //List of ALL Methods listed in the API
 
     //Size Method
@@ -26,9 +26,8 @@ public interface Deque<Card>{
     //public boolean contains(Object o);
 
     //Iterator Methods
-    //Maybe later?
-    //public Iterator<Card> descendingIterator();
-    //public Iterator<Card> iterator();
+    public Iterator<Card> descendingIterator();
+    public Iterator<Card> iterator();
 
     //Accessor Methods
     public Card element();
@@ -36,9 +35,9 @@ public interface Deque<Card>{
     public Card getLast();
 
     //-----peek: seems redundant since it just retrieves the values
-    //public Card peek();
-    //public Card peekFirst();
-    //public Card peekLast();
+    public Card peek();
+    public Card peekFirst();
+    public Card peekLast();
 
     //Stack Methods
     //Deque will not be implementing a stack
@@ -50,7 +49,7 @@ public interface Deque<Card>{
     public Card removeFirst();
     public Card removeLast();
 
-    //-----removeObjects: seems complicated
+    //-----removeObjects:
     //public boolean remove(Object o);
     //public boolean removeFirstOccurence(Object o);
     //public boolean removeLastOccurence(Object o);
