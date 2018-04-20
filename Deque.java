@@ -4,6 +4,9 @@
 //L02 -- All Hands on Deque! (Not Schenectady; rather, synecdoche.)
 //2018-04-18
 
+import java.lang.Iterable;
+import java.util.Iterator;
+
 public interface Deque<Card>{
 
     //List of ALL Methods listed in the API
@@ -26,8 +29,8 @@ public interface Deque<Card>{
     //public boolean contains(Object o);
 
     //Iterator Methods
-    public Iterator<Card> descendingIterator();
-    public Iterator<Card> iterator();
+    //public Iterator<Card> descendingIterator();
+    //public Iterator<Card> iterator();
 
     //Accessor Methods
     public Card element();

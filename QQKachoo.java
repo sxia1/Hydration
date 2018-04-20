@@ -18,8 +18,8 @@ public class QQKachoo<D> implements Deque<D>{
 
     //Constructor
     public void QQKachoo() {
-	_head = (null,null,null);
-	_tail = (null,null,null);
+	_head = new DLLNode(null,null,null);
+	_tail = new DLLNode(null,null,null);
 	_size = 0;
     }
 
@@ -103,7 +103,8 @@ public class QQKachoo<D> implements Deque<D>{
 	    throw new NoSuchElementException();
 
     	D temp = _head.getCargo();
-    	_head = _head.getNext();
+	if (_size > 1)
+	    _head = _head.getNext();
     	_head.setPrev(null);
 	_size--;
     	return temp;
@@ -120,6 +121,7 @@ public class QQKachoo<D> implements Deque<D>{
     	return temp;
     }
 
+    /*
     public Iterator<D> iterator() {
         Iterator<D> it = new Iterator(_head);
 	return it;
@@ -137,8 +139,17 @@ public class QQKachoo<D> implements Deque<D>{
 	Iterator<D> it = new Iterator(temp);
 	return it;
     }
+    */
     
     public static void main(String[] args){
-	QQKachoo boo = new QQKachoo();
+	QQKachoo deck = new QQKachoo();
+        deck.addFirst("boo");
+        deck.addLast("hoo");
+        deck.addFirst("who");
+	System.out.println(deck.peekFirst());//who
+        System.out.println(deck.removeFirst());//who
+        System.out.println(deck.removeFirst());//boo
+	System.out.println(deck.peekFirst());//hoo
+        System.out.println(deck.removeFirst());//hoo
     }
 }
