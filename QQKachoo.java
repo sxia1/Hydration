@@ -16,6 +16,13 @@ public class QQKachoo<D> implements Deque<D>{
 
     //METHODS =========================================================
 
+    //Constructor
+    public void QQKachoo() {
+	_head = (null,null,null);
+	_tail = (null,null,null);
+	_size = 0;
+    }
+
     //Returns the number of elements in this deque.
     public int size(){
 	return _size;
@@ -114,7 +121,7 @@ public class QQKachoo<D> implements Deque<D>{
     }
 
     public Iterator<D> iterator() {
-        Iterator<D> it = _head;
+        Iterator<D> it = new Iterator(_head);
 	return it;
     }
 
@@ -132,6 +139,6 @@ public class QQKachoo<D> implements Deque<D>{
     }
     
     public static void main(String[] args){
-
+	QQKachoo boo = new QQKachoo();
     }
 }
