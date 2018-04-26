@@ -139,24 +139,37 @@ public class QQKachoo<D> implements Deque<D>{
 	return temp;
     }
 
-    /*
-    public Iterator<D> iterator() {
-        Iterator<D> it = new Iterator(_head);
-	return it;
-    }
-
-    public Iterator<D> descendingIterator() {
-	DLLNode<D> help = _tail;
-	DLLNode<D> temp = new DLLNode(_tail.getCargo(),null,null);
-	DLLNode<D> retItr = temp;
-	for (int i = 0; i < _size - 1; i++) {
-	    help = help.getPrev();
-	    retItr.setNext(new DLLNode(help.getCargo(),retItr,null));
-	    retItr = retItr.getNext();
+    // Returns true if element is in this Deque
+    // Returns false if not in this Deque
+    public boolean contains(D element) {
+	DLLNode<D> temp = _head;
+	while (!(temp.isEmpty())) {
+	    if (temp.removeFirst().equals(element)) {
+		return true;
+	    }
 	}
-	Iterator<D> it = new Iterator(temp);
-	return it;
+	return false;
     }
+	    
+
+    /*
+      public Iterator<D> iterator() {
+      Iterator<D> it = new Iterator(_head);
+      return it;
+      }
+
+      public Iterator<D> descendingIterator() {
+      DLLNode<D> help = _tail;
+      DLLNode<D> temp = new DLLNode(_tail.getCargo(),null,null);
+      DLLNode<D> retItr = temp;
+      for (int i = 0; i < _size - 1; i++) {
+      help = help.getPrev();
+      retItr.setNext(new DLLNode(help.getCargo(),retItr,null));
+      retItr = retItr.getNext();
+      }
+      Iterator<D> it = new Iterator(temp);
+      return it;
+      }
     */
     
 }

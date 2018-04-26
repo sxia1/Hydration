@@ -26,7 +26,7 @@ public interface Deque<Card>{
 
     //Search methods
     //doesn't seem to be the most important right now
-    //public boolean contains(Object o);
+    public boolean contains(Object o);
 
     //Iterator Methods
     //public Iterator<Card> descendingIterator();
@@ -45,7 +45,7 @@ public interface Deque<Card>{
     //Stack Methods
     //Deque will not be implementing a stack
     //public Card pop();
-    //public void push(Card c);
+    public void push(Card c);
 
     //Remove Methods
     public Card remove();
@@ -54,13 +54,13 @@ public interface Deque<Card>{
 
     //-----removeObjects:
     //public boolean remove(Object o);
-    //public boolean removeFirstOccurence(Object o);
-    //public boolean removeLastOccurence(Object o);
+    public boolean removeFirstOccurence(Object o);
+    public boolean removeLastOccurence(Object o);
 
     //-----poll: seems redundant since it just removes and returns elements
-    //public Card poll();
-    //public Card pollFirst();
-    //public Card pollLast();
+    public Card poll();
+    public Card pollFirst();
+    public Card pollLast();
 
 
 }
