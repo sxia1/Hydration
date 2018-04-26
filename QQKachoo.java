@@ -141,17 +141,59 @@ public class QQKachoo<D> implements Deque<D>{
 
     // Returns true if element is in this Deque
     // Returns false if not in this Deque
-    public boolean contains(D element) {
+    public boolean contains(Object o) {
 	DLLNode<D> temp = _head;
 	while (!(temp.isEmpty())) {
-	    if (temp.removeFirst().equals(element)) {
+	    if (temp.removeFirst().equals(o)) {
 		return true;
 	    }
 	}
 	return false;
     }
-	    
 
+    // Stack method for adding to the front of the Deque
+    public void push(D d) {
+	DLLNode<D> newNode = new DLLNode<D>(d, null, null);
+	if (_size == 0) {
+	    _head = _tail = newNode;
+	}
+	else {
+	    newNode.setNext(_head);
+	    _head.setPrev(newNode);
+	    _head = newNode;
+	}
+    }
+
+    // removes the first occurence of a input
+    public boolean removeFirstOccurence(Object o) {
+	if (!(this.contains(o))) {
+	    return false;
+	}
+	else {
+	    DLLNode<D> temp = _head;
+	    while (!(temp.peek() == o)) {
+		temp = temp.getNext();
+	    }
+	    temp.removeFirst();
+	    return true;
+	}
+    }
+
+    // removes the last occurence of a input
+    public boolean removeLastOccurence(Object o) {
+	if (!(this.contains(o))) {
+	    return false;
+	}
+	else {
+	    DLLNode<D> temp = _tail;
+	    while (!(temp.peek() == o)) {
+		temp = temp.getPrev();
+	    }
+	    temp.removeLast();
+	    return true;
+	}
+    }
+	
     /*
       public Iterator<D> iterator() {
       Iterator<D> it = new Iterator(_head);
